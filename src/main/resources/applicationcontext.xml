@@ -4,9 +4,14 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--Here I declared School object creation 2 times, it mean it'll create two beans.-->
     <bean id="school" class="org.example.schooling.School">
     </bean>
-    <bean id="student" class="org.example.schooling.Student">
+
+    <bean id="school2" class="org.example.schooling.School">
+    </bean>
+
+    <bean id="student" class="org.example.schooling.Student" scope="prototype">
     </bean>
 
 </beans>
