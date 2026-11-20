@@ -8,10 +8,20 @@
     <bean id="school" class="org.example.schooling.School">
     </bean>
 
-    <bean id="school2" class="org.example.schooling.School">
+<!--    <bean id="school2" class="org.example.schooling.School">-->
+<!--    </bean>-->
+
+<!--    <bean id="student" class="org.example.schooling.Student" scope="prototype">-->
+<!--    </bean>-->
+
+    <bean id="student" class="org.example.schooling.Student">
+        <property name="age" value="21"></property>
     </bean>
 
-    <bean id="student" class="org.example.schooling.Student" scope="prototype">
+    <bean id="teacher" class="org.example.schooling.Teachers">
+        <constructor-arg value="21"/>
+        <constructor-arg ref="school"/>
+
     </bean>
 
 </beans>
